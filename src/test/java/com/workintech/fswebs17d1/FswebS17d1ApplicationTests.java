@@ -67,7 +67,7 @@ class FswebS17d1ApplicationTests {
 						.contentType(MediaType.APPLICATION_JSON)
 						.content(objectMapper.writeValueAsString(newAnimal)))
 				.andExpect(status().isOk());
-		
+
 		mockMvc.perform(get("/workintech/animal/1"))
 				.andExpect(status().isOk())
 				.andExpect(jsonPath("$.id").value(1))
